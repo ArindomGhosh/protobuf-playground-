@@ -1,0 +1,10 @@
+syntax="proto3";
+//package com.example.somepackage;
+option java_package = "com.example.somepackage";
+import "google/protobuf/any.proto";
+
+// Todo need to look into more details
+message ErrorStatus {
+  string message = 1 ; //[default = "ada"] default value not supported in proto3
+  repeated google.protobuf.Any details = 2;
+}

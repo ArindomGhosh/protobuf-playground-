@@ -1,0 +1,12 @@
+syntax = "proto3";
+//package com.example.somepackage.services;
+option java_package ="com.example.somepackage.services";
+option java_multiple_files = true;
+import "search_request.proto";
+import "search_response.proto";
+
+
+//TODO  need to look into more details
+service SearchService {
+  rpc Search(SearchRequest) returns (SearchResponse);
+}

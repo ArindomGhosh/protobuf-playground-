@@ -1,0 +1,19 @@
+syntax = "proto3";
+//package com.example.somepackage;
+option java_package = "com.example.somepackage";
+option java_multiple_files = true;
+message SampleMessage{
+  oneof test_onof{
+    MessageTypeOne message_one = 5;
+    MessageTypeTwo message_two = 6;
+  }
+  map<int64, string> projects = 3;
+}
+
+message MessageTypeOne{
+  string messageOne = 4;
+}
+
+message MessageTypeTwo{
+  string messageTwo = 9;
+}

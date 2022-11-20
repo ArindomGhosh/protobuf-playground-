@@ -1,0 +1,21 @@
+
+syntax="proto3";
+import "search_req_enum.proto";
+//option java_outer_classname = "something" ;
+//package com.example.somepackage;
+option java_package = "com.example.somepackage";
+option java_multiple_files = true;
+message SearchRequest{
+  string query = 1;
+  optional int32 page_number = 2;
+  optional int32 result_per_page = 3;
+  repeated string some_value = 4;
+  repeated Filter filters = 7 ;
+  Corpus corpus = 5;
+}
+
+message Filter{
+  string keys =6;
+  string key2 = 8;
+  int64 sequence = 9;
+}

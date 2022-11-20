@@ -1,0 +1,12 @@
+syntax="proto3";
+//package com.example.somepackage;
+option java_package = "com.example.somepackage";
+
+message SearchResponse {
+  message Result {
+    string url = 1;
+    string title = 2;
+    repeated string snippets = 3;
+  }
+  repeated Result results = 1;
+}
